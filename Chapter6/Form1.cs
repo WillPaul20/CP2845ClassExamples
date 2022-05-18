@@ -66,5 +66,10 @@ namespace Chapter6
             txtRectPerimeter.Text = clr;
 
         }
+
+        private void txtboxChanged(object sender, EventArgs e)
+        {
+            txtRectPerimeter.BackColor = Color.Red;
+        }
     }
 }

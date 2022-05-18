@@ -203,6 +203,7 @@
             this.txtRectArea.Name = "txtRectArea";
             this.txtRectArea.Size = new System.Drawing.Size(100, 20);
             this.txtRectArea.TabIndex = 5;
+            this.txtRectArea.TextChanged += new System.EventHandler(this.txtboxChanged);
             // 
             // txtRectPerimeter
             // 

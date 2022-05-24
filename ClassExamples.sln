@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter8_Part1_ConsoleApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter8_Part2", "Chapter8_Part2\Chapter8_Part2.csproj", "{1555E484-06F0-4684-8E72-5AACDD99D4EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10_CoffeeMachine", "Chapter10_CoffeeMachine\Chapter10_CoffeeMachine.csproj", "{31085578-79B9-4738-AC24-14A42B8D02C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1555E484-06F0-4684-8E72-5AACDD99D4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1555E484-06F0-4684-8E72-5AACDD99D4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1555E484-06F0-4684-8E72-5AACDD99D4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31085578-79B9-4738-AC24-14A42B8D02C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31085578-79B9-4738-AC24-14A42B8D02C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31085578-79B9-4738-AC24-14A42B8D02C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31085578-79B9-4738-AC24-14A42B8D02C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

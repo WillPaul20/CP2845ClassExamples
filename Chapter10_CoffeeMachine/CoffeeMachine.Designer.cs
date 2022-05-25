@@ -1,6 +1,6 @@
 ﻿namespace Chapter10_CoffeeMachine
 {
-    partial class Form1
+    partial class CoffeeMachine
     {
         /// <summary>
         /// Required designer variable.

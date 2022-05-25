@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Chapter10_CoffeeMachine
 {
-    public partial class Form1 : Form
+    public partial class CoffeeMachine : Form
     {
         private string[] drinks = {"Espresso", "Latte", "Cappuccino"};
         private decimal amountAdded = 0.0m;
         private decimal billAmount = 0.0m;
-        public Form1()
+        public CoffeeMachine()
         {
             InitializeComponent();
         }

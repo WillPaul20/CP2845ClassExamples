@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10_CoffeeMachine", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10_Demo2_PassingDataBetweenForms", "Chapter10_Demo2_PassingDataBetweenForms\Chapter10_Demo2_PassingDataBetweenForms.csproj", "{8FF8CDBF-9A3A-4DF1-9996-97C0754EF5FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter11_Debugging", "Chapter11_Debugging\Chapter11_Debugging.csproj", "{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8FF8CDBF-9A3A-4DF1-9996-97C0754EF5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF8CDBF-9A3A-4DF1-9996-97C0754EF5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF8CDBF-9A3A-4DF1-9996-97C0754EF5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

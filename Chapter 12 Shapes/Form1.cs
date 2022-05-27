@@ -22,6 +22,17 @@ namespace Chapter_12_Shapes
         {
             Debug.WriteLine("Hello everyone!");
             MyPoint p1 = new MyPoint(5, 7);
+            Debug.WriteLine(p1.ToString());
+            p1.X = 9;
+            Debug.WriteLine(p1.ToString());
+            p1.Y = 12;
+            Debug.WriteLine(p1.ToString());
+
+            MyPoint p2 = new MyPoint(10, 5);
+            Debug.WriteLine(p2.ToString());
+
+            Debug.WriteLine($"p1.distance(p2) = {p1.distance(p2)}");
+            Debug.WriteLine($"Distance to origin {p2.ToString()} {p2.distance()}");
         }
     }
 }

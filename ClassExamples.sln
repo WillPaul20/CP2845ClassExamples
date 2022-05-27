@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter10_Demo2_PassingData
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter11_Debugging", "Chapter11_Debugging\Chapter11_Debugging.csproj", "{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter 12 Shapes", "Chapter 12 Shapes\Chapter 12 Shapes.csproj", "{0093D0D7-3BD5-45AB-9FDF-548AF2701D2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{467D06F5-E07A-4D77-A2A5-7351FB2FB4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0093D0D7-3BD5-45AB-9FDF-548AF2701D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0093D0D7-3BD5-45AB-9FDF-548AF2701D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0093D0D7-3BD5-45AB-9FDF-548AF2701D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0093D0D7-3BD5-45AB-9FDF-548AF2701D2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

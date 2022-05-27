@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,7 @@ namespace Chapter11_Debugging
 
         double getCylinderVolume(double radius, double height)
         {
+            Debug.WriteLine($"Cyl Vol {radius} {height}");
             if (height <= 0)
             {
                 throw new ArgumentException("Height must be greater than 0.");

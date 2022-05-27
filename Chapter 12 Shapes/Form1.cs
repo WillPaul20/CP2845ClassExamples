@@ -34,5 +34,11 @@ namespace Chapter_12_Shapes
             Debug.WriteLine($"p1.distance(p2) = {p1.distance(p2)}");
             Debug.WriteLine($"Distance to origin {p2.ToString()} {p2.distance()}");
         }
+
+        private void btnCreatePoint_Click(object sender, EventArgs e)
+        {
+            MyPoint newPoint = new MyPoint(Convert.ToInt32(txtX.Text), Convert.ToInt32(txtY.Text));
+            lstPoints.Items.Add(newPoint.ToString());
+        }
     }
 }

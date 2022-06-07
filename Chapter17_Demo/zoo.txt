@@ -1,0 +1,7 @@
+Cats
+Dogs
+Pigs
+Cows
+Rabbits
+Zebras
+Ants

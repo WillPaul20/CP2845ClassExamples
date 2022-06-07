@@ -52,5 +52,35 @@ namespace Chapter17_Demo
                 writer.Write(rtbFileContent.Text);
             }
         }
+
+        private void btnBinFileOpen_Click(object sender, EventArgs e)
+        {
+            string userFileName = txtBinFileName.Text;
+
+            if (File.Exists(userFileName))
+            {
+                using (BinaryReader reader = new BinaryReader(new FileStream(userFileName, FileMode.Open)))
+                {
+                    string text = reader.ReadString();
+                    rtbBinFile.Text = text;
+                }
+            }
+            else
+            {
+                MessageBox.Show($"File {userFileName} Not Found",
+                    "File not found error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtBinFileSave_Click(object sender, EventArgs e)
+        {
+            string userFileName = txtFileName.Text;
+            using (BinaryWriter writer = new BinaryWriter(new FileStream(userFileName, FileMode.Create)))
+            {
+                writer.Write("Test");
+            }
+        }
     }
 }

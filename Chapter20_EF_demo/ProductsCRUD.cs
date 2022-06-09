@@ -72,17 +72,20 @@ namespace Chapter20_EF_demo
             }
         }
 
-        private void updateComboBox()
+        private void updateComboBoxs()
         {
             MMABooksContext context = new MMABooksContext();
             cboProducts.DataSource = context.Products.ToList();
             cboProducts.ValueMember = nameof(Products.ProductCode);
             cboProducts.DisplayMember = nameof(Products.Description);
+            cboUpdateProducts.DataSource = context.Products.ToList();
+            cboUpdateProducts.ValueMember = nameof(Products.ProductCode);
+            cboUpdateProducts.DisplayMember = nameof(Products.Description);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            updateComboBox();
+            updateComboBoxs();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -91,13 +94,48 @@ namespace Chapter20_EF_demo
             Products productToBeDeleted = cboProducts.SelectedItem as Products;
             context.Products.Remove(productToBeDeleted);
             context.SaveChanges();
-            updateComboBox();
+            updateComboBoxs();
             MessageBox.Show($"Product {productToBeDeleted.Description} deleted");
         }
 
         private void ProductsCRUD_Load(object sender, EventArgs e)
         {
-            updateComboBox();
+            updateComboBoxs();
+        }
+
+        private void btnDisplayInfo_Click(object sender, EventArgs e)
+        {
+            updateComboBoxs();
+        }
+
+        private void cboUpdateProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MMABooksContext context = new MMABooksContext();
+            Products productToBeUpdated = cboUpdateProducts.SelectedItem as Products;
+            txtUpdateProductCode.Text = productToBeUpdated.ProductCode;
+            txtUpdateProductDesc.Text = productToBeUpdated.Description;
+            txtUpdateProductPrice.Text = productToBeUpdated.UnitPrice.ToString();
+            txtUpdateProductQuantity.Text = productToBeUpdated.OnHandQuantity.ToString();
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            MMABooksContext context = new MMABooksContext();
+
+            var getProduct = from product in context.Products
+                             where product.ProductCode == txtUpdateProductCode.Text
+                             select product;
+
+            var productToBeUpdated = getProduct.FirstOrDefault();
+
+            productToBeUpdated.UnitPrice = Convert.ToDecimal(txtUpdateProductPrice.Text);
+            productToBeUpdated.Description = txtUpdateProductDesc.Text;
+            productToBeUpdated.OnHandQuantity = Convert.ToInt32(txtUpdateProductQuantity.Text);
+
+            context.Products.Update(productToBeUpdated);
+            context.SaveChanges();
+            MessageBox.Show($"{txtProductDesc.Text} Updated");
+
         }
     }
 }

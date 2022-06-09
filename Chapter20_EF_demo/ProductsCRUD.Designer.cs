@@ -39,11 +39,25 @@
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cboProducts = new System.Windows.Forms.ComboBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.cboProducts = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cboUpdateProducts = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnDisplayInfo = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtUpdateProductCode = new System.Windows.Forms.TextBox();
+            this.txtUpdateProductDesc = new System.Windows.Forms.TextBox();
+            this.txtUpdateProductPrice = new System.Windows.Forms.TextBox();
+            this.txtUpdateProductQuantity = new System.Windows.Forms.TextBox();
+            this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -150,13 +164,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // cboProducts
+            // btnDelete
             // 
-            this.cboProducts.FormattingEnabled = true;
-            this.cboProducts.Location = new System.Drawing.Point(135, 26);
-            this.cboProducts.Name = "cboProducts";
-            this.cboProducts.Size = new System.Drawing.Size(183, 21);
-            this.cboProducts.TabIndex = 0;
+            this.btnDelete.Location = new System.Drawing.Point(339, 26);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(115, 23);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete Product";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -168,21 +184,144 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnDelete
+            // cboProducts
             // 
-            this.btnDelete.Location = new System.Drawing.Point(339, 26);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(115, 23);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete Product";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.cboProducts.FormattingEnabled = true;
+            this.cboProducts.Location = new System.Drawing.Point(135, 26);
+            this.cboProducts.Name = "cboProducts";
+            this.cboProducts.Size = new System.Drawing.Size(183, 21);
+            this.cboProducts.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnUpdateProduct);
+            this.groupBox3.Controls.Add(this.txtUpdateProductQuantity);
+            this.groupBox3.Controls.Add(this.txtUpdateProductPrice);
+            this.groupBox3.Controls.Add(this.txtUpdateProductDesc);
+            this.groupBox3.Controls.Add(this.txtUpdateProductCode);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.btnDisplayInfo);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.cboUpdateProducts);
+            this.groupBox3.Location = new System.Drawing.Point(328, 94);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(460, 344);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // cboUpdateProducts
+            // 
+            this.cboUpdateProducts.FormattingEnabled = true;
+            this.cboUpdateProducts.Location = new System.Drawing.Point(141, 87);
+            this.cboUpdateProducts.Name = "cboUpdateProducts";
+            this.cboUpdateProducts.Size = new System.Drawing.Size(183, 21);
+            this.cboUpdateProducts.TabIndex = 0;
+            this.cboUpdateProducts.SelectedIndexChanged += new System.EventHandler(this.cboUpdateProducts_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Select Product:";
+            // 
+            // btnDisplayInfo
+            // 
+            this.btnDisplayInfo.Location = new System.Drawing.Point(135, 41);
+            this.btnDisplayInfo.Name = "btnDisplayInfo";
+            this.btnDisplayInfo.Size = new System.Drawing.Size(115, 23);
+            this.btnDisplayInfo.TabIndex = 2;
+            this.btnDisplayInfo.Text = "List Products";
+            this.btnDisplayInfo.UseVisualStyleBackColor = true;
+            this.btnDisplayInfo.Click += new System.EventHandler(this.btnDisplayInfo_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Product Code";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Description";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 205);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Price";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(27, 238);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Quantity";
+            // 
+            // txtUpdateProductCode
+            // 
+            this.txtUpdateProductCode.Location = new System.Drawing.Point(141, 135);
+            this.txtUpdateProductCode.Name = "txtUpdateProductCode";
+            this.txtUpdateProductCode.ReadOnly = true;
+            this.txtUpdateProductCode.Size = new System.Drawing.Size(183, 20);
+            this.txtUpdateProductCode.TabIndex = 7;
+            // 
+            // txtUpdateProductDesc
+            // 
+            this.txtUpdateProductDesc.Location = new System.Drawing.Point(141, 171);
+            this.txtUpdateProductDesc.Name = "txtUpdateProductDesc";
+            this.txtUpdateProductDesc.Size = new System.Drawing.Size(183, 20);
+            this.txtUpdateProductDesc.TabIndex = 8;
+            // 
+            // txtUpdateProductPrice
+            // 
+            this.txtUpdateProductPrice.Location = new System.Drawing.Point(141, 205);
+            this.txtUpdateProductPrice.Name = "txtUpdateProductPrice";
+            this.txtUpdateProductPrice.Size = new System.Drawing.Size(183, 20);
+            this.txtUpdateProductPrice.TabIndex = 9;
+            // 
+            // txtUpdateProductQuantity
+            // 
+            this.txtUpdateProductQuantity.Location = new System.Drawing.Point(141, 238);
+            this.txtUpdateProductQuantity.Name = "txtUpdateProductQuantity";
+            this.txtUpdateProductQuantity.Size = new System.Drawing.Size(183, 20);
+            this.txtUpdateProductQuantity.TabIndex = 10;
+            // 
+            // btnUpdateProduct
+            // 
+            this.btnUpdateProduct.Location = new System.Drawing.Point(141, 293);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(168, 23);
+            this.btnUpdateProduct.TabIndex = 11;
+            this.btnUpdateProduct.Text = "Update Product";
+            this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // ProductsCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ProductsCRUD";
@@ -191,6 +330,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +352,18 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.ComboBox cboProducts;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnUpdateProduct;
+        private System.Windows.Forms.TextBox txtUpdateProductQuantity;
+        private System.Windows.Forms.TextBox txtUpdateProductPrice;
+        private System.Windows.Forms.TextBox txtUpdateProductDesc;
+        private System.Windows.Forms.TextBox txtUpdateProductCode;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnDisplayInfo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboUpdateProducts;
     }
 }

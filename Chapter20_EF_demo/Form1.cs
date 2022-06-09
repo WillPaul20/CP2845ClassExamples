@@ -31,7 +31,7 @@ namespace Chapter20_EF_demo
             }
 
             var products2 = from product in context.Products
-                            where product.UnitPrice > 57
+                            where product.UnitPrice > 57 && product.OnHandQuantity > 4000
                             orderby product.UnitPrice
                             select product;
 
@@ -40,6 +40,15 @@ namespace Chapter20_EF_demo
                 rtbOutput2.Text += $"{product.Description} Price = {product.UnitPrice}" + Environment.NewLine;
             }
 
+            var invoices = from invoice in context.Invoices
+                           where invoice.InvoiceTotal > 250
+                           select new {invoice.CustomerId, 
+                           invoice.InvoiceDate, invoice.InvoiceTotal};
+
+            foreach(var invoice in invoices)
+            {
+                rtbOutput2.Text += $"{invoice.InvoiceTotal}" + Environment.NewLine;
+            }
         }
     }
 }

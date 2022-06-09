@@ -175,6 +175,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Joins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Joins.Designer.cs">
+      <DependentUpon>Joins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\DataLayer\Customers.cs" />
     <Compile Include="Models\DataLayer\InvoiceLineItems.cs" />
     <Compile Include="Models\DataLayer\Invoices.cs" />
@@ -182,10 +188,22 @@
     <Compile Include="Models\DataLayer\OrderOptions.cs" />
     <Compile Include="Models\DataLayer\Products.cs" />
     <Compile Include="Models\DataLayer\States.cs" />
+    <Compile Include="ProductsCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsCRUD.Designer.cs">
+      <DependentUpon>ProductsCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Joins.resx">
+      <DependentUpon>Joins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsCRUD.resx">
+      <DependentUpon>ProductsCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

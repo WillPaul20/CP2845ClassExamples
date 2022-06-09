@@ -71,5 +71,33 @@ namespace Chapter20_EF_demo
                 MessageBox.Show($"Product {prodcutDesc} Not Created", "Add Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void updateComboBox()
+        {
+            MMABooksContext context = new MMABooksContext();
+            cboProducts.DataSource = context.Products.ToList();
+            cboProducts.ValueMember = nameof(Products.ProductCode);
+            cboProducts.DisplayMember = nameof(Products.Description);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            updateComboBox();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            MMABooksContext context = new MMABooksContext();
+            Products productToBeDeleted = cboProducts.SelectedItem as Products;
+            context.Products.Remove(productToBeDeleted);
+            context.SaveChanges();
+            updateComboBox();
+            MessageBox.Show($"Product {productToBeDeleted.Description} deleted");
+        }
+
+        private void ProductsCRUD_Load(object sender, EventArgs e)
+        {
+            updateComboBox();
+        }
     }
 }

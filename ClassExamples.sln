@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz1StudentQueries", "Quiz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter20_EF_demo", "Chapter20_EF_demo\Chapter20_EF_demo.csproj", "{1230ED6A-F65E-49EA-8B27-640FD9FB4C54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter22_DataGridView", "Chapter22_DataGridView\Chapter22_DataGridView.csproj", "{1D463DD2-35DF-430F-9C44-373CE26BAED1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{1230ED6A-F65E-49EA-8B27-640FD9FB4C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1230ED6A-F65E-49EA-8B27-640FD9FB4C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1230ED6A-F65E-49EA-8B27-640FD9FB4C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

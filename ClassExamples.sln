@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter20_EF_demo", "Chapte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter22_DataGridView", "Chapter22_DataGridView\Chapter22_DataGridView.csproj", "{1D463DD2-35DF-430F-9C44-373CE26BAED1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL_Test", "MySQL_Test\MySQL_Test.csproj", "{75A098AC-E58A-42FA-972D-C373DE1677D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D463DD2-35DF-430F-9C44-373CE26BAED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A098AC-E58A-42FA-972D-C373DE1677D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A098AC-E58A-42FA-972D-C373DE1677D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A098AC-E58A-42FA-972D-C373DE1677D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A098AC-E58A-42FA-972D-C373DE1677D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
